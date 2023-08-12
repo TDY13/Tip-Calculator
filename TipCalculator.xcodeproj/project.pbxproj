@@ -171,7 +171,7 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
-		1732D27D2A8417AE0098C196 /* CalculatorView */ = {
+		1732D27D2A8417AE0098C196 /* CalculatorViews */ = {
 			isa = PBXGroup;
 			children = (
 				174A3C192A8008F700B10B0F /* LogoView.swift */,
@@ -182,7 +182,7 @@
 				174A3C1F2A800BA300B10B0F /* TipInputView.swift */,
 				174A3C212A800BAF00B10B0F /* SplitInputView.swift */,
 			);
-			path = CalculatorView;
+			path = CalculatorViews;
 			sourceTree = "<group>";
 		};
 		1732D27E2A8417D70098C196 /* Plugins */ = {
@@ -219,7 +219,7 @@
 			children = (
 				177166872A7FF7F800020970 /* CalculatorViewController.swift */,
 				174A3C162A80084900B10B0F /* CalculatorView.swift */,
-				1732D27D2A8417AE0098C196 /* CalculatorView */,
+				1732D27D2A8417AE0098C196 /* CalculatorViews */,
 			);
 			path = View;
 			sourceTree = "<group>";

@@ -52,14 +52,15 @@ class LogoView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        layout()
+        accessibilityIdentifier = ScreenIdentifier.LogoView.logoView.rawValue
+        setup()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func layout() {
+    private func setup() {
         
         addSubview(hStackView)
         

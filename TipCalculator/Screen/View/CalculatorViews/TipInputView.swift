@@ -19,6 +19,7 @@ class TipInputView: UIView {
     
     private lazy var tenPercentTipButton: UIButton = {
         let obj = buildTipButton(tip: .tenPercent)
+        obj.accessibilityIdentifier = ScreenIdentifier.TipInputView.tenPercentButton.rawValue
         obj.tapPublisher.flatMap({
             Just(Tip.tenPercent)
         }).assign(to: \.value, on: tipSubject)
@@ -28,6 +29,7 @@ class TipInputView: UIView {
     
     private lazy var fifteenPercentTipButton: UIButton = {
         let obj = buildTipButton(tip: .fifteenPercent)
+        obj.accessibilityIdentifier = ScreenIdentifier.TipInputView.fifteenPercentButton.rawValue
         obj.tapPublisher.flatMap({
             Just(Tip.fifteenPercent)
         }).assign(to: \.value, on: tipSubject)
@@ -37,6 +39,7 @@ class TipInputView: UIView {
     
     private lazy var twentyPercentTipButton: UIButton = {
         let obj = buildTipButton(tip: .twentyPercent)
+        obj.accessibilityIdentifier = ScreenIdentifier.TipInputView.twentyPercentButton.rawValue
         obj.tapPublisher.flatMap({
             Just(Tip.twentyPercent)
         }).assign(to: \.value, on: tipSubject)
@@ -46,6 +49,7 @@ class TipInputView: UIView {
     
     private lazy var customTipButton: UIButton = {
         let obj = UIButton()
+        obj.accessibilityIdentifier = ScreenIdentifier.TipInputView.customTipButton.rawValue
         obj.setTitle("Custom tip", for: .normal)
         obj.titleLabel?.font = ThemeFont.bold(ofSize: 20)
         obj.backgroundColor = ThemeColor.primary
@@ -118,6 +122,7 @@ class TipInputView: UIView {
                 textField.placeholder = "Make it generous!"
                 textField.keyboardType = .numberPad
                 textField.autocorrectionType = .no
+                textField.accessibilityIdentifier = ScreenIdentifier.TipInputView.customTipAlertTextField.rawValue
             }
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
             let okAction = UIAlertAction(title: "Ok", style: .default) { [weak self] _ in
